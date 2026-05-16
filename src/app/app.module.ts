@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { appInitializer, ErrorInterceptor, JwtInterceptor, fakeBackendProvider } from './_helpers';
 import { AccountService } from './_services';
+import { HomeComponent } from './home';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { AccountService } from './_services';
     ],
     declarations: [
         AppComponent,
-        AlertComponent
+        AlertComponent,
+        HomeComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, deps: [AccountService], multi: true },
